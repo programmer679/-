@@ -1,0 +1,83 @@
+正则表达式匹配原则
+Python re模块使用
+
+1.re.match(pattern,string,flags=0)
+功能:匹配某个目标字符串开始位置
+参数:pattern 正则
+string 目标字符串
+返回值:匹配内容match object
+===========方法
+group(n = 0)
+功能:获取match对象匹配内容
+参数:默认为0表示获取整个match对象内容,
+如果是序列号或者组名则表示获取对应子组内容
+返回值:匹配字符串
+============
+
+
+2.re.search(pattern,string,flags=0)
+功能:匹配目标字符串第一个符合内容
+参数:pattern 正则
+string 目标字符串
+返回值:匹配内容match object
+
+3.re.fullmatch(pattern,string,flags=0)
+功能:完全匹配某个目标字符串
+参数:pattern 正则
+string 目标字符串
+返回值:匹配内容match object
+
+4.re.finditer(pattern,string,flags = 0)
+功能: 根据正则表达式匹配目标字符串内容
+参数: pattern 正则表达式
+string 目标字符串
+flags 功能标志位,扩展正则表达式的匹配
+返回值: 匹配结果的迭代器
+
+5.re.subn(pattern,replace,string,count,flags = 0)
+功能: 使用一个字符串替换正则表达式匹配到的内容
+参数: pattern 正则表达式
+replace 替换的字符串
+string 目标字符串
+max 最多替换几处,默认替换全部
+flags 功能标志位,扩展正则表达式的匹配
+返回值: 替换后的字符串和替换了几处
+
+6.re.sub(pattern,replace,string,count,flags = 0)
+功能: 使用一个字符串替换正则表达式匹配到的内容
+参数: pattern 正则表达式
+replace 替换的字符串
+string 目标字符串
+max 最多替换几处,默认替换全部
+flags 功能标志位,扩展正则表达式的匹配
+返回值: 替换后的字符串
+
+7.re.split(pattern,string,flags = 0)
+功能: 使用正则表达式匹配内容,切割目标字符串
+参数: pattern 正则表达式
+string 目标字符串
+flags 功能标志位,扩展正则表达式的匹配
+返回值: 切割后的内容列表
+
+8.re.findall(pattern,string,flags = 0)
+功能: 根据正则表达式匹配目标字符串内容
+参数: pattern 正则表达式
+string 目标字符串
+flags 功能标志位,扩展正则表达式的匹配
+返回值: 匹配到的内容列表,
+如果正则表达式有子组则只能获取到子组对应的内容
+
+
+9.regex = compile(pattern,flags = 0)
+功能: 生产正则表达式对象
+参数: pattern 正则表达式
+flags 功能标志位,扩展正则表达式的匹配
+返回值: 正则表达式对象
+
+regex.findall(string,pos,endpos)
+功能: 根据正则表达式匹配目标字符串内容
+参数: string 目标字符串
+pos 截取目标字符串的开始匹配位置
+endpos 截取目标字符串的结束匹配位置
+返回值: 匹配到的内容列表,
+如果正则表达式有子组则只能获取到子组对应的内容
